@@ -144,6 +144,9 @@ export const aiSystemsApi = {
     order?: string
     skip?: number
     limit?: number
+    search?: string
+    risk_level?: string
+    compliance_status?: string
   }) => {
     const { data } = await api.get('/ai-systems/', { params })
     return ensureListResponse(data, 'AI systems')
